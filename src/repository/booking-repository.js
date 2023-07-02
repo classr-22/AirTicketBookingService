@@ -6,7 +6,7 @@ const {AppError ,ValidationError } = require('../utils/errors/index');
 class BookingRepository{
     async create(data){
         try {
-            const book = booking.create(data);
+            const book = await booking.create(data);
             return book;
         } catch (error) {
             if(error.name == 'SequelizeValidationError'){
