@@ -13,6 +13,12 @@ const setupAndStartServer = () => {
     app.use(bodyparser.json());
     app.use(bodyparser.urlencoded({extended:true}));
 
+    // app.get('/bookingservice/api/v1/home',(req,res)=>{
+    //     return res.json({
+    //         message: "hitting booking service"
+    //     });
+    // })
+
     app.use('/api',apiRoutes);
 
     app.listen(PORT,()=>{
